@@ -7,10 +7,12 @@ public class User {
     private int age;
     private boolean registered;
 
-    public User(String firstname, String lastname, String username) {
+    public User(String firstname, String lastname, String username, int age, boolean registered) {
         this.firstname = firstname;
         this.lastname = lastname;
         this.username = username;
+        this.age = age;
+        this.registered = registered;
     }
 
     public void setFirstname(String firstname) {
