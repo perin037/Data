@@ -6,6 +6,7 @@ import androidx.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import rs.ac.ni.pmf.data.databinding.ActivityMainBinding;
 
@@ -40,6 +41,11 @@ public class MainActivity extends AppCompatActivity implements UsersHandler {
             _currentUser++;
             _binding.setUser(_userRepository.getUser(_currentUser));
         }
+    }
+
+    @Override
+    public void toastValue(boolean value) {
+        Toast.makeText(this, "Value: " + String.valueOf(value), Toast.LENGTH_SHORT).show();
     }
 
     @Override
