@@ -64,6 +64,17 @@ public class User extends BaseObservable {
         return registered;
     }
 
+    @Override
+    public String toString() {
+        return "User{" +
+                "firstname='" + firstname + '\'' +
+                ", lastname='" + lastname + '\'' +
+                ", username='" + username + '\'' +
+                ", age=" + age +
+                ", registered=" + registered +
+                '}';
+    }
+
     public void makeOlder(){
         setAge(getAge() + 1);
         Log.i("LOGTAG", "User " + username + " is now " + age + " years old");
